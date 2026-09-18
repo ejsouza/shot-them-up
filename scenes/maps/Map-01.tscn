@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b4lvql31rjjlp"]
+
+[ext_resource type="Texture2D" uid="uid://ceqs4sbevfwdq" path="res://assets/background_space.png" id="1_1qxo7"]
+[ext_resource type="Texture2D" uid="uid://y43dk43738yq" path="res://assets/background_stars.png" id="2_3vhpe"]
+[ext_resource type="PackedScene" uid="uid://dgb4j4lbl4j4m" path="res://scenes/characters/Player.tscn" id="3_ayq44"]
+
+[node name="Map01" type="Node2D" unique_id=216211912]
+
+[node name="Background" type="Node2D" parent="." unique_id=554533590]
+
+[node name="DarkParallax2D" type="Parallax2D" parent="Background" unique_id=1197542753]
+repeat_size = Vector2(640, 360)
+repeat_times = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background/DarkParallax2D" unique_id=853878649]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1qxo7")
+
+[node name="StarsParallax2D" type="Parallax2D" parent="Background" unique_id=609296145]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(640, 360)
+autoscroll = Vector2(0, 100)
+repeat_times = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background/StarsParallax2D" unique_id=234388146]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3vhpe")
+
+[node name="Player" parent="." unique_id=226274895 instance=ExtResource("3_ayq44")]
+position = Vector2(320, 260)

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dgb4j4lbl4j4m"]
+
+[ext_resource type="Texture2D" uid="uid://gvrkdnvwp4rg" path="res://assets/spaceships_player.png" id="1_pq8s5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gin2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8ao"]
+atlas = ExtResource("1_pq8s5")
+region = Rect2(141, 71, 39, 41)
+
+[node name="Player" type="Area2D" unique_id=226274895]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=861353781]
+shape = SubResource("CircleShape2D_gin2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1331015238]
+texture = SubResource("AtlasTexture_7n8ao")
